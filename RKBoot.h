@@ -59,7 +59,7 @@ public:
 	bool CrcCheck();
 	bool SaveEntryFile(ENUM_RKBOOTENTRY type, UCHAR ucIndex, string fileName);
 	bool GetEntryProperty(ENUM_RKBOOTENTRY type, UCHAR ucIndex, DWORD &dwSize, DWORD &dwDelay, char *pName = NULL);
-	char GetIndexByName(ENUM_RKBOOTENTRY type, char *pName);
+	signed char GetIndexByName(ENUM_RKBOOTENTRY type, char *pName);
 	bool GetEntryData(ENUM_RKBOOTENTRY type, UCHAR ucIndex, PBYTE lpData);
 	CRKBoot(PBYTE lpBootData, DWORD dwBootSize, bool &bCheck);
 	~CRKBoot();

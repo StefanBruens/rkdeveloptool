@@ -109,7 +109,7 @@ bool CRKBoot::GetEntryProperty(ENUM_RKBOOTENTRY type,UCHAR ucIndex,DWORD &dwSize
 	case ENTRYLOADER:
 		dwOffset = m_loaderOffset;
 		ucCount = m_loaderCount;
-		ucSize = m_loaderSize;//Loader长度生成时已经512对齐
+		ucSize = m_loaderSize;//Loader鲁陇露脠脡煤鲁脡脢卤脪脩戮颅512露脭脝毛
 		break;
 	default:
 		return false;
@@ -161,7 +161,7 @@ bool CRKBoot::GetEntryData(ENUM_RKBOOTENTRY type,UCHAR ucIndex,PBYTE lpData)
 	memcpy(lpData,m_BootData+pEntry->dwDataOffset,pEntry->dwDataSize);
 	return true;
 }
-char CRKBoot::GetIndexByName(ENUM_RKBOOTENTRY type,char *pName)
+signed char CRKBoot::GetIndexByName(ENUM_RKBOOTENTRY type,char *pName)
 {
 	DWORD dwOffset;
 	UCHAR ucCount,ucSize;
